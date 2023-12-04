@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>42MC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/42mc-round.png" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
+</head>
+<body>    
+    <div class="content">
+        <div class="main-flex">
+            <div class="main-info">
+                <h1>42 MC</h1>
+                <!--
+                <p>For up to date information, please see this <a href="https://github.com/42mc/server/issues/1" target="_blank">issue</a>.</p>
+                <br>
+                -->
+                <p>42 MC is a small 1.20 Minecraft SMP running <a href="https://papermc.io" target="_blank">PaperMC</a></p>
+                <p>For whitelisting, please contact <a href="https://matrix.to/#/@42willow:matrix.org" target="_blank">@42willow:matrix.org</a></p>
+                <p>Hosted in Australia 🦘</p>
+
+                <div class="join-now">
+                    <div class="ip-container">
+                        <p>IP: <span class="ip">cameras-chemical.joinmc.link</span></p>
+                    </div>
+                    <button class="copy-ip-btn">Copy</button>
+                </div>
+                <p>Connection issues? <strong>Bedrock?</strong> Read the <a href="#troubleshooting">troubleshooting</a> section.</p>
+            </div>
+            <div class="main-status">
+                <div class="card"> <div class="icon"><img src="assets/42mc.png" id="favicon"></div><div class="header">
+                    <div class="image"> <img height="180px" width="300px" src="assets/wallpaper_minecraft_mangrove_swamp_3840x2160.png" alt="" /> </div>
+                    <h2>42mc</h2>
+                    </div>
+                    <div id="rest">Loading...<br>(Server possibly offline)</div>
+                  </div>
+                  
+            </div>
+        </div>
+        
+        <div class="scroll-section">
+            <div class="dynmap">
+                <h2>Dynmap</h2>
+                <a href="http://exchange-xhtml.at.ply.gg:33678/" target="_blank">Open in new tab</a>
+            </div>
+            <div class="rules">
+                <h2>Rules:</h2>
+                <h3>What is not allowed:</h3>
+                <ol>
+                    <li>No griefing: <em>Players should not intentionally destroy or modify other players&#39; builds without their consent. Respect all creations and property.</em></li>
+                    <li>No cheating or hacking: <em>Players should not use any form of cheats, hacks, or exploits that give them an unfair advantage over other players. Play the game legitimately. Please only use modifications equivalent to <a href="https://www.optifine.net/home" target="_blank">Optifine</a> changes, modifications should also not give you an advantage over other players.</em></li>
+                    <li>Be respectful and considerate: <em>Treat other players with kindness and respect. Avoid offensive language, harassment, or any form of disruptive behavior. Be mindful of the community's well-being.</em></li>
+                    <li>Report issues responsibly: <em>If you encounter bugs, glitches, or any problems on the server, report them to the server administrators or moderators in a responsible and timely manner.</em></li>
+                    <li>Spawn killing</li>
+                    <li>Lag machines</li>
+                    <li>Stealing: <em>Stealing is not allowed, unless it is unnoticed. Please ping me (@42willow:matrix.org) anytime if you suspect items are missing and I can check.</em></li>
+                    <li>AFK farming: <em>This includes any form of automation</em></li>
+                    <li>Circumventing: <em>Any form of circumventing is not allowed, this includes but is not limited to: Creeper griefing, hopper chest emptying, and TNT cannons.</em></li>
+                    <li>No claiming or destroying limited spaces: <em>(eg. main end island, strongholds) - Farms here <em>can</em> be made (eg. sand dupers), but they must be community farms.</em></li>
+                    <li>No PvP within defined areas: <em>Defined areas can be requested to be added on the map, this rule doesn't apply if you are already PvPing (you can't run into a defined area to stop a fight).</em></li>
+                </ol>
+                <h3>👮 Four-Strike Policy</h3>
+                <p>Our community guidelines are important to us, and for that reason we have a four-strikes policy that we use whenever our rules are broken. If it’s determined that you’ve broken one of the server rules you’ll receive a strike, and the penalty you get will be based on the number of strikes you have:</p>
+                <ol>
+                    <li>Warning (4 months)</li>
+                    <li>Temp ban (1 day)</li>
+                    <li>Temp ban (1 week)</li>
+                    <li>Permanent ban</li>
+                </ol>
+                <h4>Some more information:</h4>
+                <ul>
+                    <li>Your strikes reset after your initial warning expires.</li>
+                    <li>You will be informed whenever you gain a strike due to a violation of the rules, and at our discretion we will award multiple strikes at once if a user commits an especially bad offense, so be on your best behavior!</li>
+                    <li>All damage done will be reverted</li>
+                    <li>Enquiries and appeals can be made by contacting <a href="https://matrix.to/#/@42willow:matrix.org" target="_blank">@42willow:matrix.org</a></li>
+                </ul>
+            </div>
+            <button class="copy-rules-btn">Copy Rules</button>
+            <div class="troubleshooting">
+                <h2 id="troubleshooting">Troubleshooting:</h2>
+                <h3>Connection issues:</h3>
+                <ul>
+                    <li>Make sure you are using the correct IP address.</li>
+                    <li>Currently, there is only support for the Minecraft Java version of the game!</li>
+                    <li>Some ISPs block <code>ply.gg</code> - If you can't view the dynmap whilst the server is online, that's you.
+                </ul>
+                <h3>Alternative connection methods</h3>
+                <h4>Bedrock</h4>
+                <p>IP: <code>songs-appears.at.ply.gg</code></p>
+                <p>Port: <code>63258</code></p>
+                <h4>Other Java IP</h4>
+                <p><code>cameras-chemical.craft.ply.gg</code></p>
+                <p>If your ISP is blocking <code>ply.gg</code>, you can use <a href="https://remote.it" target="_blank">remote.it</a> to connect instead.</p>
+                <ol>
+                    <li>Download the version of the application for your OS <a href="https://www.remote.it/download" target="_blank">here</a>.</li>
+                    <li>Contact <a href="https://matrix.to/#/@42willow:matrix.org" target="_blank">@42willow:matrix.org</a> to gain access to the server.</li>
+                    <li>Follow the guide <a href="https://support.remote.it/hc/en-us/articles/360044078112-Hosting-a-Minecraft-Server-Java-Edition-" target="_blank">here</a> to connect to the server.</li>
+                </ol>
+                
+                <p>If you are still having issues, please contact <a href="https://matrix.to/#/@42willow:matrix.org" target="_blank">@42willow:matrix.org</a> on Matrix.</p>
+            </div>
+            <div class="client-setup">
+                <h2>Client Side Setup:</h2>
+                <p>These mods are <em>recommended</em> for the best experience on the server.</p>
+                <h3>🔉Simple Voice Chat (Fabric or Forge)</h3>
+                <p>Simple Voice Chat is a proximity voice chat mod. It allows you to talk to players near you, and hear them. It is not required, but is recommended.</p>
+                <h4>Installation</h4>
+                <ul>
+                    <li>Modrinth: <a href="https://modrinth.com/plugin/simple-voice-chat/versions?c=release " target="_blank">Download</a></li>
+                    <li>Curseforge: <a href="https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat" target="_blank">Download</a></li>
+                    <li>Github: <a href="https://github.com/henkelmax/simple-voice-chat" target="_blank">Source</a></li>
+                </ul>
+                <h3>Pre-selected Fabric Mods for this server</h3>
+                <h4>Here are some mods that are recommended for this server:</h4>
+                <p>📩 Click <a href="https://moddermore.net/list/czTecRv3QzMg" download>here</a> to download (moddermore link).</p>
+            </div>
+            <div class="features">
+                <h2>Server Dependencies:</h2>
+                <ul>
+                    <li>Server Software - <a href="https://github.com/PaperMC/Paper" target="_blank">PaperMC</a></li>
+                    <li>Web Map - <a href="https://github.com/webbukkit/dynmap" target="_blank">Dynmap</a></li>
+                    <li>Proximity Chat - <a href="https://github.com/henkelmax/simple-voice-chat" target="_blank">Simple Voice Chat</a></li>
+                    <li>Chunk Pregen - <a href="https://github.com/pop4959/Chunky" target="_blank">Chunky</a></li>
+                    <!-- <li>Cross version support - <a href="https://github.com/ViaVersion/ViaVersion" target="_blank">ViaVersion</a></li> -->
+                    <li>Permissions - <a href="https://github.com/LuckPerms/LuckPerms" target="_blank">LuckPerms</a></li>
+                    <li>Chat Styling - <a href="https://github.com/lucko/VaultChatFormatter" target="_blank">VaultChatFormatter</a></li>
+                    <li>Teams - <a href="https://github.com/booksaw/BetterTeams" target="_blank">BetterTeams</a></li>
+                    <!-- <li>Bedrock support - <a href="https://github.com/GeyserMC/Geyser" target="_blank">Geyser</a></li> -->
+                    <li>Moderation - <a href="https://www.spigotmc.org/resources/advancedban.8695/" target="_blank">AdvancedBan</a></li>
+                    <li>Anti-cheat - <a href="https://github.com/GrimAnticheat/Grim" target="_blank">GrimAC</a></li>
+                    <li>Anti-griefing - <a href="https://github.com/PlayPro/CoreProtect" target="_blank">CoreProtect</a></li>
+                </ul>
+                <div class="paper-mc-settings">
+                    <h3>PaperMC Settings</h3>
+                    <p>PaperMC provides a number of settings to improve performance and prevent exploits. These are the settings we have changed from the default.</p>
+                    <ul>
+                        <li><code>fix-curing-zombie-villager-discount-exploit</code> 🠮 <code>false</code> (Allows multiple cures)</li>
+                        <li><code>allow-permanent-block-break-exploits</code> 🠮 <code>true</code> (Allows breaking bedrock, and portal blocks)</li>
+                        <li><code>allow-piston-duplication</code> 🠮 <code>true</code> (Allows duping TNT, carpet, and rails)</li>
+                        <li><code>generate-random-seeds-for-all</code> 🠮 <code>true</code> (Prevents seed reversing)</li>
+                        <li><code>anti-xray</code> 🠮 <code>true</code> (Prevents x-ray)</li>
+                        <li><code>treasure-maps</code> 🠮 <code>false</code> (Fix treasure map lag spike)</li>
+                    </ul>
+                    <h3>Gamerules</h3>
+                    <p>These are the gamerules we have changed from the default.</p>
+                    <ul>
+                        <li><code>playersSleepingPercentage</code> 🠮 <code>-1</code> (One player sleep)</li>
+                        <li><code>difficulty</code> 🠮 <code>hard</code> (Hard difficulty)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

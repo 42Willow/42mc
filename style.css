@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url("assets/fonts/MinecraftRegular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minecraft';
+    src: url("assets/fonts/MinecraftBold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Minecraft';
+    src: url("assets/fonts/MinecraftItalic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Minecraft';
+    src: url("assets/fonts/MinecraftBoldItalic.otf") format("opentype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+body {
+    font-family: 'Minecraft', monospace;
+    font-size: 1.3em;
+    margin: 0;
+}
+
+a {
+    color: rgb(210, 235, 243);
+}
+
+.content {
+    /* this is needed or the background will be offset by a few pixels at the top */
+    position: relative;
+    top: calc(100vh - var(--main-flex-height) - 50px);
+    border-radius: 40px 40px 0px 0px;
+    background-color: #2d353b;
+    color: white;
+    max-width: 100%;
+    height: 60%;
+    padding: 30px;
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.86);
+    box-sizing: content-box;
+    margin: 10px;
+}
+
+.content::before {
+    content: "";
+    position: fixed;
+    top: -5%;
+    left: -5%;
+    z-index: -1;
+
+    display: block;
+    background-image: url("assets/SS_Cherry_Wallpaper_04.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 110%;
+    height: 110%;
+
+    /* filter: blur(2px); */
+}
+
+h1 {
+    margin: 0;
+}
+.icon {
+    /* disable anti-aliasing */
+    image-rendering: pixelated;
+    /* prevent stretching */
+    width: 50px;
+    height: 50px;
+}
+
+/* Styling for server IP copying */
+.join-now {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 450px;
+    margin: 0;
+    padding: 10px;
+    background-color: #525c64;
+    border-radius: 999px;
+}
+
+.join-now p {
+    margin: 0;
+}
+
+.copy-rules-btn {
+    margin-bottom: 10px;
+}
+
+button {
+    height: 36px;
+    width: 100px;
+    background-color: #68757f;
+    border-radius: 999px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    color: white;
+}
+button:hover {
+    cursor: pointer;
+    background-color: #96aabc;
+    transform: scale(1.1);
+}
+code {
+    background-color: #525c64;
+    padding: 5px;
+    border-radius: 5px;
+}
+.paper-mc-settings li {
+    margin-bottom: 10px;
+}
+
+.main-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1,h2{
+font-weight:400;
+}
+.card {
+    position: relative;
+    margin: 10px auto;
+    padding: 0;
+    width: 200px;
+    min-width: 300px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.3);
+    -webkit-animation: fadein 2s;
+            animation: fadein 2s;
+    overflow:hidden;
+    z-index: 999;
+}
+
+.header {
+    position: relative;
+    z-index:1;
+    width: 100%;
+    height: 180px;
+    box-shadow:0 4px 3px #0002;
+    overflow: hidden;
+}
+.card img{
+    width:100%;
+    transition: all 1s ease;
+    z-index:0
+}
+.image {
+    width: 100%;
+    height: 180px;
+    overflow:hidden;
+}
+
+.image:hover img{
+-webkit-transform: scale(1.2, 1.2);
+        transform: scale(1.2, 1.2);
+}
+
+.header h2{
+    position:absolute;
+    bottom:0;
+    margin:0;
+    width:100%;
+    padding:0 10px;
+    color:#fff;
+    text-transform:uppercase;
+    pointer-events:none;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+}
+.icon {
+    position: absolute;
+    background:#fff;
+    right: 10px;
+    top: 135px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow:hidden;
+    border: 3px solid #fff;
+    box-shadow:0 4px 3px #0002;
+    z-index:9
+}
+#rest{
+    padding:30px 15px;
+    line-height:30px;
+    color:#000d42;
+    min-height: 100px;
+    max-height: 200px;
+    overflow: auto;
+}
+
+.rules em {
+    color: #bebebe;
+}
+
+h2:not(.card h2)::before {
+    content: "";
+    display: block;
+    /* border-top: 5px solid rgba(255, 255, 255, 0.5); */
+    border-top: 5px solid rgba(214, 153, 182, 0.7);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+h3::before {
+    content: "";
+    display: block;
+    border-top: 5px dotted rgba(255, 255, 255, 0.5);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.dynmap iframe {
+    width: 80%;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+}
