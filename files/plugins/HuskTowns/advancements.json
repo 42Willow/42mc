@@ -1,0 +1,515 @@
+{
+  "title": "Towns",
+  "description": "Build and grow a thriving town community",
+  "icon": "minecraft:red_bed",
+  "frame": "TASK",
+  "send_notification": false,
+  "conditions": [],
+  "rewards": [],
+  "children": [
+    {
+      "title": "Taking Root",
+      "description": "Create or join a town",
+      "icon": "minecraft:oak_sign",
+      "frame": "TASK",
+      "send_notification": true,
+      "conditions": [
+        {
+          "variable": "user_in_town",
+          "operation": "IS",
+          "value": "true"
+        }
+      ],
+      "rewards": [
+        {
+          "type": "PLAYER_EXPERIENCE",
+          "quantity": 50
+        }
+      ],
+      "children": [
+        {
+          "title": "You Are (Not) Alone",
+          "description": "Have another member join your town",
+          "icon": "minecraft:zombie_head",
+          "frame": "TASK",
+          "send_notification": true,
+          "conditions": [
+            {
+              "variable": "town_members",
+              "operation": "GREATER_THAN",
+              "value": "1"
+            }
+          ],
+          "rewards": [],
+          "children": [
+            {
+              "title": "Fallen Kingdom",
+              "description": "Have at least 15 unique players leave your town",
+              "icon": "minecraft:wither_skeleton_skull",
+              "frame": "TASK",
+              "send_notification": true,
+              "conditions": [
+                {
+                  "variable": "members_left",
+                  "operation": "GREATER_THAN",
+                  "value": "14"
+                }
+              ],
+              "rewards": [],
+              "children": []
+            },
+            {
+              "title": "Eight\u0027s a Crowd",
+              "description": "Have 8 members in your town",
+              "icon": "minecraft:player_head",
+              "frame": "TASK",
+              "send_notification": true,
+              "conditions": [
+                {
+                  "variable": "town_members",
+                  "operation": "GREATER_THAN",
+                  "value": "7"
+                }
+              ],
+              "rewards": [],
+              "children": [
+                {
+                  "title": "Bustling Community",
+                  "description": "Have 16 members in your town",
+                  "icon": "minecraft:creeper_head",
+                  "frame": "TASK",
+                  "send_notification": true,
+                  "conditions": [
+                    {
+                      "variable": "town_members",
+                      "operation": "GREATER_THAN",
+                      "value": "15"
+                    }
+                  ],
+                  "rewards": [
+                    {
+                      "type": "PLAYER_EXPERIENCE",
+                      "quantity": 200
+                    }
+                  ],
+                  "children": [
+                    {
+                      "title": "City Community",
+                      "description": "Have 32 members in your town",
+                      "icon": "minecraft:dragon_head",
+                      "frame": "CHALLENGE",
+                      "send_notification": true,
+                      "conditions": [
+                        {
+                          "variable": "town_members",
+                          "operation": "GREATER_THAN",
+                          "value": "31"
+                        }
+                      ],
+                      "rewards": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Changing Of The Guard",
+              "description": "Have the ownership of your town transferred to another player",
+              "icon": "minecraft:iron_sword",
+              "frame": "TASK",
+              "send_notification": true,
+              "conditions": [
+                {
+                  "variable": "town_mayor_changed",
+                  "operation": "GREATER_THAN",
+                  "value": "0"
+                }
+              ],
+              "rewards": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "Established",
+          "description": "Have your town be at least a week old",
+          "icon": "minecraft:clock",
+          "frame": "TASK",
+          "send_notification": true,
+          "conditions": [
+            {
+              "variable": "town_founded",
+              "operation": "GREATER_THAN",
+              "value": "2023-11-25T14:55:24.944512415+11:00"
+            }
+          ],
+          "rewards": [],
+          "children": []
+        },
+        {
+          "title": "New Horizons",
+          "description": "Claim the first chunk of land for your town",
+          "icon": "minecraft:dirt",
+          "frame": "TASK",
+          "send_notification": true,
+          "conditions": [
+            {
+              "variable": "town_claims",
+              "operation": "GREATER_THAN",
+              "value": "0"
+            }
+          ],
+          "rewards": [
+            {
+              "type": "PLAYER_EXPERIENCE",
+              "quantity": 50
+            }
+          ],
+          "children": [
+            {
+              "title": "Village Expansion",
+              "description": "Claim 6 chunks of land for your town",
+              "icon": "minecraft:oak_log",
+              "frame": "TASK",
+              "send_notification": true,
+              "conditions": [
+                {
+                  "variable": "town_claims",
+                  "operation": "GREATER_THAN",
+                  "value": "5"
+                }
+              ],
+              "rewards": [
+                {
+                  "type": "PLAYER_ITEMS",
+                  "quantity": 16,
+                  "value": "minecraft:oak_log"
+                }
+              ],
+              "children": [
+                {
+                  "title": "Officially A Town",
+                  "description": "Claim 18 chunks of land for your town",
+                  "icon": "minecraft:stone_bricks",
+                  "frame": "GOAL",
+                  "send_notification": true,
+                  "conditions": [
+                    {
+                      "variable": "town_claims",
+                      "operation": "GREATER_THAN",
+                      "value": "17"
+                    }
+                  ],
+                  "rewards": [],
+                  "children": [
+                    {
+                      "title": "City Folk",
+                      "description": "Claim 40 chunks of land for your town",
+                      "icon": "minecraft:gray_concrete",
+                      "frame": "TASK",
+                      "send_notification": true,
+                      "conditions": [
+                        {
+                          "variable": "town_claims",
+                          "operation": "GREATER_THAN",
+                          "value": "39"
+                        }
+                      ],
+                      "rewards": [],
+                      "children": [
+                        {
+                          "title": "The Empire Business",
+                          "description": "Claim 80 chunks of land for your town",
+                          "icon": "minecraft:beacon",
+                          "frame": "CHALLENGE",
+                          "send_notification": true,
+                          "conditions": [
+                            {
+                              "variable": "town_claims",
+                              "operation": "GREATER_THAN",
+                              "value": "79"
+                            }
+                          ],
+                          "rewards": [
+                            {
+                              "type": "PLAYER_EXPERIENCE",
+                              "quantity": 500
+                            }
+                          ],
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "And Yet The Town Moves",
+              "description": "Move the town spawn position somewhere else",
+              "icon": "minecraft:ender_eye",
+              "frame": "TASK",
+              "send_notification": true,
+              "conditions": [
+                {
+                  "variable": "town_has_spawn",
+                  "operation": "IS",
+                  "value": "true"
+                },
+                {
+                  "variable": "changed_spawn",
+                  "operation": "GREATER_THAN",
+                  "value": "0"
+                }
+              ],
+              "rewards": [],
+              "children": []
+            },
+            {
+              "title": "Well Signposted",
+              "description": "Set both a greeting and a farewell message for your town",
+              "icon": "minecraft:paper",
+              "frame": "TASK",
+              "send_notification": true,
+              "conditions": [
+                {
+                  "variable": "town_has_greeting",
+                  "operation": "IS",
+                  "value": "true"
+                },
+                {
+                  "variable": "town_has_farewell",
+                  "operation": "IS",
+                  "value": "true"
+                }
+              ],
+              "rewards": [
+                {
+                  "type": "PLAYER_EXPERIENCE",
+                  "quantity": 50
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "Level Up",
+          "description": "Level up your town to Level 2",
+          "icon": "minecraft:experience_bottle",
+          "frame": "TASK",
+          "send_notification": true,
+          "conditions": [
+            {
+              "variable": "town_level",
+              "operation": "GREATER_THAN",
+              "value": "1"
+            }
+          ],
+          "rewards": [],
+          "children": [
+            {
+              "title": "Five Guys",
+              "description": "Level up your town to Level 5",
+              "icon": "minecraft:nether_brick",
+              "frame": "GOAL",
+              "send_notification": true,
+              "conditions": [
+                {
+                  "variable": "town_level",
+                  "operation": "GREATER_THAN",
+                  "value": "4"
+                }
+              ],
+              "rewards": [
+                {
+                  "type": "PLAYER_EXPERIENCE",
+                  "quantity": 50
+                }
+              ],
+              "children": [
+                {
+                  "title": "High Roller",
+                  "description": "Level up your town to Level 10",
+                  "icon": "minecraft:iron_ingot",
+                  "frame": "TASK",
+                  "send_notification": true,
+                  "conditions": [
+                    {
+                      "variable": "town_level",
+                      "operation": "GREATER_THAN",
+                      "value": "9"
+                    }
+                  ],
+                  "rewards": [],
+                  "children": [
+                    {
+                      "title": "You Have Money",
+                      "description": "Level up your town to Level 15",
+                      "icon": "minecraft:gold_ingot",
+                      "frame": "TASK",
+                      "send_notification": true,
+                      "conditions": [
+                        {
+                          "variable": "town_level",
+                          "operation": "GREATER_THAN",
+                          "value": "14"
+                        }
+                      ],
+                      "rewards": [],
+                      "children": [
+                        {
+                          "title": "Now You\u0027re Just Bragging",
+                          "description": "Level up your town to Level 20",
+                          "icon": "minecraft:netherite_ingot",
+                          "frame": "CHALLENGE",
+                          "send_notification": true,
+                          "conditions": [
+                            {
+                              "variable": "town_level",
+                              "operation": "GREATER_THAN",
+                              "value": "19"
+                            }
+                          ],
+                          "rewards": [
+                            {
+                              "type": "PLAYER_EXPERIENCE",
+                              "quantity": 500
+                            }
+                          ],
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "A Brief History",
+          "description": "Set a bio for your town",
+          "icon": "minecraft:book",
+          "frame": "TASK",
+          "send_notification": true,
+          "conditions": [
+            {
+              "variable": "town_has_bio",
+              "operation": "IS",
+              "value": "true"
+            }
+          ],
+          "rewards": [],
+          "children": [
+            {
+              "title": "Painting The Town Red, Green \u0026 Blue",
+              "description": "Change your town\u0027s color",
+              "icon": "minecraft:painting",
+              "frame": "GOAL",
+              "send_notification": true,
+              "conditions": [
+                {
+                  "variable": "changed_color",
+                  "operation": "GREATER_THAN",
+                  "value": "0"
+                }
+              ],
+              "rewards": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "A Penny Saved",
+          "description": "Deposit 100 into the town bank",
+          "icon": "minecraft:chainmail_helmet",
+          "frame": "TASK",
+          "send_notification": true,
+          "conditions": [
+            {
+              "variable": "town_money",
+              "operation": "GREATER_THAN",
+              "value": "99"
+            }
+          ],
+          "rewards": [],
+          "children": [
+            {
+              "title": "A Penny Earned",
+              "description": "Deposit 5,000 into the town bank",
+              "icon": "minecraft:golden_helmet",
+              "frame": "TASK",
+              "send_notification": true,
+              "conditions": [
+                {
+                  "variable": "town_money",
+                  "operation": "GREATER_THAN",
+                  "value": "4999"
+                }
+              ],
+              "rewards": [],
+              "children": [
+                {
+                  "title": "Interest Free",
+                  "description": "Deposit 15,000 into the town bank",
+                  "icon": "minecraft:turtle_helmet",
+                  "frame": "CHALLENGE",
+                  "send_notification": true,
+                  "conditions": [
+                    {
+                      "variable": "town_money",
+                      "operation": "GREATER_THAN",
+                      "value": "14999"
+                    }
+                  ],
+                  "rewards": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "title": "Tax Deductible",
+              "description": "Have 10 unique players deposit into the town bank",
+              "icon": "minecraft:emerald",
+              "frame": "TASK",
+              "send_notification": true,
+              "conditions": [
+                {
+                  "variable": "unique_depositors",
+                  "operation": "GREATER_THAN",
+                  "value": "9"
+                }
+              ],
+              "rewards": [
+                {
+                  "type": "TOWN_MONEY",
+                  "quantity": 1000
+                }
+              ],
+              "children": [
+                {
+                  "title": "You Need An Auditor",
+                  "description": "Have 25 unique players deposit into the town bank",
+                  "icon": "minecraft:diamond",
+                  "frame": "CHALLENGE",
+                  "send_notification": true,
+                  "conditions": [
+                    {
+                      "variable": "unique_depositors",
+                      "operation": "GREATER_THAN",
+                      "value": "24"
+                    }
+                  ],
+                  "rewards": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
